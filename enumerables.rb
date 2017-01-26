@@ -73,22 +73,6 @@ class Array
   end
 
   def my_rotate(rotation = 1)
-    # if rotation < 0
-    #   negative = true
-    #   rotation *= -1
-    # else
-    #   negative = false
-    # end
-    #
-    # rot_arr = self.dup
-    # rotation.times do
-    #   if negative
-    #     rot_arr.unshift(rot_arr.pop)
-    #   else
-    #     rot_arr << rot_arr.shift
-    #   end
-    # end
-    # rot_arr
     split_idx = rotation % self.length
     self.drop(split_idx) + self.take(split_idx)
   end
@@ -107,13 +91,6 @@ class Array
   end
 
   def my_reverse
-    # new_arr = []
-    # duplicate = self.dup
-    # duplicate.my_each do |var|
-    #   new_arr << duplicate.pop
-    # end
-    # new_arr += duplicate
-    # new_arr
     reversed_arr = []
 
     self.my_each do |el|
